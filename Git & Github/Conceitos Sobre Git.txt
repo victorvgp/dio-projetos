@@ -1,0 +1,73 @@
+Conceitos sobre o Git
+
+-SHA1
+-Objetos fundamentais
+-Sistema distribuído
+-Segurança
+
+O que é SHA1? -> Algorito de Encripitaçao.
+
+A sigra SHA siginifica "Secure Hash Algorithm (Algoritmo de Hash Seguro),
+é um conjunto de funções hash criptográficas prijetadas pela NSA(Agência
+de Segurança Nacional dos EUA).
+
+A encriptação gera conjunto de characteres identificador de 40 dígitos.
+
+É uma forma curta de representar um arquivo.
+
+exemplo:
+echo "ola mundo" | openssl sha1
+> (stdin)= f9fc856e559b950175f2b7cd7dad61dacbe58e7b
+
+3 tipos basicos de objetos do git, responsaveis por versionamento do nosso 
+códigos
+
+-BLOBS
+-TREES
+-COMMITS
+
+Blobs - bloco basico de composição
+
+echo 'conteudo' | git hash-object --stdin
+> fc31e91b26cf85a55e072476de7f263c89260eb1
+
+echo -e 'conteudo' | openssl sha1
+> 65b0d0dda479cc03cce59528e28961e498155f5c
+
+O arquivo vai ser guardado dentro do objeto blob, onde contem meta dados
+dentro dele.
+
+O objeto blob vai ter o tipo(blob), tamanho(do arquivo ex. 42), \0(barra contraria com o 0)
+ e o conteúdo do arquivo(seja texto, binario...)
+
+Tree
+Armazenam blobs (apontam para o blob) trabalha na mesma forma que o blob, com
+o diferencial a mais que ele também guarda o nome do arquivo..
+A arvore vai ser responsável por montar toda a estrutura de onde esta localizada
+esse arquivo.
+
+Se mudarmos um arquivos toda a estrutura será alterada no sha
+
+
+Commit
+Objeto que vai juntar tudo e da sintido para tudo...
+O commit leva o autor, parente, mensagem , timestamp
+
+
+Sitema distribuído Seguro
+Você tem seu código na nuvem
+
+
+
+Git init - > Inicializa o repositorio (criando um repositorio)
+
+Tracked (arquivos que o git tem ciência deles) ou Untracked (arquivos que
+o git não tem ciência deles)
+
+Tracked - São arquivos rastreados pelo git
+
+São divididos em 3 partes
+ - Unmodified -> arquivos que ainda não foram modificados
+ - Modified -> Arquivos Modificados
+ - Staged -> Onde fica os arquivos que estão se preparando para fazer parte de outro tipo de agrupamento
+

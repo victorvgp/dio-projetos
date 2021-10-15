@@ -1,0 +1,41 @@
+cdclTerminal de Navegação
+
+Comando de Navegação windows // linux
+1 - Listar -> dir // ls
+2 - Entrar na pastas -> cd /
+3 - Voltar -> cd ..
+4 - Limpar o terminal -> cls // clear (contro L)
+
+*Tab auto completa
+
+5 - Criar uma pasta -> mkdir
+
+*Echo printar uma frase ou texto no terminal
+
+*> redirecionador de fluxo....
+
+6 - Deletar somente arquivos -> del // rm
+7 - Deletar a pasta -> rmdir // rf
+
+Seta para cima mostra comandos já usados
+
+
+Comando git
+
+Mostrar o status
+git status
+
+Adicionar(apontar) a origem, na qual estamos enviando o arquivo
+git remote add origin url(github)
+
+Lista as lista de repositorios cadastrados
+git remote -v
+
+Empurrar para o github
+git push origin master
+
+Puxar repositorio
+git pull origin master
+
+baixar repositorio
+git clone url (github)
